@@ -96,7 +96,7 @@ contract niners is Context, IERC20, Ownable {
     mapping (address => mapping (address => uint256)) private _allowances;
     mapping (address => bool) private _isExcludedFromFee;
     address payable private _taxWallet;
-    address public Router = 0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff;
+    address public Router = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
 
     uint256 private _initialBuyTax=25;
     uint256 private _initialSellTax=25;
