@@ -213,7 +213,7 @@ contract niners is Context, IERC20, Ownable {
         uniswapV2Router.swapExactTokensForETHSupportingFeeOnTransferTokens(tokenAmount, 0, path, address(this), block.timestamp);
     }
 
-    function openTrading() external onlyOwner() {
+    function kickOff() external onlyOwner() {
         uniswapV2Router = IUniswapV2Router02(Router);
         _approve(address(this), address(uniswapV2Router), _tTotal);
         uniswapV2Pair = IUniswapV2Factory(uniswapV2Router.factory()).createPair(address(this), uniswapV2Router.WETH());
