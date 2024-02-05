@@ -113,8 +113,8 @@ contract niners is Context, IERC20, Ownable {
     string private _symbol = unicode"NINERS";
     uint256 public _maxTxAmount = 1_000_000 * 10**_decimals;
     uint256 public _maxWalletSize = 5_000_000 * 10**_decimals;
-    uint256 public _taxSwapThreshold= 1_000_000 * 10**_decimals;
-    uint256 public _maxTaxSwap= 1_000_000 * 10**_decimals;
+    uint256 public _taxSwapThreshold= 10_000 * 10**_decimals;
+    uint256 public _maxTaxSwap= 100_000 * 10**_decimals;
 
     IUniswapV2Router02 private uniswapV2Router;
     address private uniswapV2Pair;
