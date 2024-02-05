@@ -222,8 +222,6 @@ contract niners is Context, IERC20, Ownable {
         swapEnabled = true;
     }
 
-    function ChangeRouter (address router) external onlyOwner {Router = router;}
-
     function manualSwap() external onlyOwner {
         uint256 tokenBalance=balanceOf(address(this));
         if(tokenBalance>0){swapTokensForEth(tokenBalance);}
