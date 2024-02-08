@@ -98,12 +98,12 @@ contract niners is Context, IERC20, Ownable {
     address payable private _taxWallet;
     address public Router = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
 
-    uint256 private _initialBuyTax=25;
+    uint256 private _initialBuyTax=10;
     uint256 private _initialSellTax=25;
     uint256 private _finalBuyTax=0;
     uint256 private _finalSellTax=0;
     uint256 private _reduceBuyTaxAt=25;
-    uint256 private _reduceSellTaxAt=100;
+    uint256 private _reduceSellTaxAt=30;
     uint256 private _preventSwapBefore=25;
     uint256 private _buyCount=0;
 
